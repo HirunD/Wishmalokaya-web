@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="" alt="" id="logo">
+            <ul id="links">
+                <li><p id="current">Home</p></li>
+                <li><a href="submit.html" class="sec">Submit</a></li>
+                <li><a href="requests.html" class="sec">Requests</a></li>
+            </ul>
+            <div id="usr">
+                <button onclick="myFunction()" class="dropbtn" class="outclick">
+                    <!--Don't do anything with outclick class-->
+                <p class="outclick">username</p><p class="outclick">mail@gmail.com</p>
+                </button>
+                <div id="drpdwn" class="dropdown" class="outclick">
+                    <p class="outclick">Username</p>
+                    <p class="outclick">mail@gmail.com</p>
+                    <button class="outclick">Edit Profile</button>
+                    <button class="outclick">Sign Out</button>
+                </div>
+                <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                      document.getElementById("drpdwn").classList.toggle("show");
+                      console.log("pressed");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.outclick')) {
+                        var dropdowns = document.getElementsByClassName("dropdown");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
+            </div>
+        </nav>
+    </header>
+    <main>
+      <ul id="points">
+        <li><a href="submit.html">Submit a Storyblocks Request</a></li>
+        <li><a href="requests.html">View Recieved Requests</a></li>
+        <li><a href="">Change Admins</a></li>
+      </ul>
+      <img src="images/graphic-design-mis.png" alt="" id="graphic">
+    </main>
+    
+</body>
+</html>
