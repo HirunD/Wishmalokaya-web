@@ -16,6 +16,7 @@
     background-color: rgba(185, 185, 185, 0.247);
     border-radius: 10px;
     align-items: center;
+    backdrop-filter: blur(2px);
 }
 #drpdwn button{
     margin:0.5vw 0;
@@ -25,22 +26,24 @@
     font-family:arial;
     background-color: transparent;
     border:none;
-    box-shadow: 2px 2px 8px #111;
-    color:white;
+    box-shadow: 2px 2px 8px rgb(37, 37, 37);
+    color:rgb(0, 0, 0);
     cursor: pointer;
     width:80%;
     transition:250ms;
+    background-color: rgb(180, 180, 180);
 }
 #drpdwn button:hover{
-    background-color: rgb(31, 5, 205)
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 #drpdwn p{
     padding:0.2vw 0;
     text-align: center;
     font-size:1.2vw;
     font-family:arial;
-    color:white;
-    text-shadow:3px 3px 4px #111;
+    color:rgb(0, 0, 0);
+    /* text-shadow:3px 3px 4px #111; */
 }
 .show{
     display:flex;
@@ -49,6 +52,7 @@
     position: relative;
     display: inline-block;
     height:fit-content;
+    padding-right: 10px;
 }
 #links li{
     display:inline-block;
@@ -56,30 +60,31 @@
 }
 .sec{
     text-decoration: none;
-    color:white;
+    color:rgb(0, 0, 0);
     font-size:1.3vw;
     font-family:arial;
     transition: 250ms;
 }
-.sec:hover{
+/* .sec:hover{
     color:red;
     text-shadow: 2px 2px 3px #111;
-}
-#current{
+} */
+/* #current{
     border-bottom: 2px solid white;
     cursor:default;
     text-decoration: none;
     color:white;
     font-size:1.3vw;
     font-family:arial;
-}
+} */
 nav{
     z-index: 999;
-    background-color: rgba(28, 28, 28, 0.333);
+    background-color: rgba(255, 255, 255, 0.333);
     display:flex;
     align-items: center;
     justify-content: space-between;
     transition:500ms;
+    box-shadow: 0px -10px 100px 1px black;
 }
 .dropbtn{
     height:fit-content;
@@ -91,19 +96,20 @@ nav{
     color:white;
     padding:1vw;
     transition:250ms;
-    border-radius: 5px;
+    /* border-radius: 50px; */
     display:flex;
     align-items: center;
     cursor: pointer;
 }
 .dropbtn:hover{
     font-size:1.04vw;
-    text-shadow:2px 2px 8px #111;
-    box-shadow: 2px 2px 8px #111;
+    transform: scale(155%);
+    /* text-shadow:2px 2px 8px #111; */
+    /* box-shadow: 2px 2px 8px #111; */
 }
 #logo{
-    width:8vw;
-    padding:1vw;
+    width:10vw;
+    padding:0.5vw;
 }
 #profile{
     width:3vw;
@@ -116,5 +122,61 @@ nav{
     font-size:1vw;
 }
 #profile-in{
-    width:3.5vw;
+    width:4.5vw;
+    /* padding-top: 0%; */
 }
+
+
+.nav-ele {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: red;
+    /* background-color: #404040; */
+    float: left;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+  }
+
+
+.nav-ele::after {
+    background-color: rgb(21, 0, 251);
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 20;
+    transition: width 0.35s ease 0s;
+    position: absolute;
+  }
+  
+  .nav-ele:hover::after {
+    width: 100%;
+  }
+
+  .nav-ele-focus {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+    /* font-size: 25px; */
+    color: rgb(41, 41, 41);
+    /* background-color: #404040; */
+    float: left;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+  }
+  
+
+  .nav-ele-focus::after {
+    background-color: rgb(52, 52, 52);
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 20;
+    transition: width 0.35s ease 0s;
+    position: absolute;
+    width: 75%;
+    margin-left: 15;
+  }
+  

@@ -1,9 +1,18 @@
-var cl = new cloudinary.Cloudinary({cloud_name: "wishmalokaya", secure: true});
+// {/* <button id="upload_widget" class="cloudinary-button">Upload files</button> */}
 
+// {/* <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>   */}
 
-function upload() {
-    cloudinary.uploader().upload(new File("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg"),
-  ObjectUtils.asMap("public_id", "olympic_flag"));
-}
+// {/* <script type="text/javascript">   */}
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'wishmalokaya', 
+  uploadPreset: 'wishmalokaya'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info); 
+    }
+  }
+)
 
-// upload()
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+// </script>
