@@ -18,11 +18,15 @@ main a{
 }
 #graphic{
     width:40vw;
-    transform: scaleX(-1);
     filter:sepia(10%) saturate(150%);
 }
+
 #points li{
     display:inline-block;
     padding:5vh 0;
-
+    transition: 250ms;
+}
+#points li:hover{
+    text-shadow: 2px 2px 8px #111;
+    transform:scale(105%);
 }

@@ -10,18 +10,24 @@
 <body>
     <header>
         <nav>
-            <img src="" alt="" id="logo">
+            <img src="images/WISHMA logo png.png" alt="" id="logo">
             <ul id="links">
                 <li><p id="current">Home</p></li>
                 <li><a href="submit.html" class="sec">Submit</a></li>
-                <li><a href="requests.html" class="sec">Requests</a></li>
+                <li><a href="requests.html" class="sec">Messages</a></li>
             </ul>
             <div id="usr">
                 <button onclick="myFunction()" class="dropbtn" class="outclick">
                     <!--Don't do anything with outclick class-->
-                <p class="outclick">username</p><p class="outclick">mail@gmail.com</p>
+                <div class="outclick">
+                  <p class="outclick" id="upname">username</p>
+                  <p class="outclick" id="upmail">mail@gmail.com</p>
+                </div>
+                <img src="images/user.png" alt="" id="profile">
                 </button>
                 <div id="drpdwn" class="dropdown" class="outclick">
+
+                    <img src="images/user.png" alt="" id="profile-in">
                     <p class="outclick">Username</p>
                     <p class="outclick">mail@gmail.com</p>
                     <button class="outclick">Edit Profile</button>
@@ -58,7 +64,7 @@
         <li><a href="requests.html">View Recieved Requests</a></li>
         <li><a href="">Change Admins</a></li>
       </ul>
-      <img src="images/graphic-design-mis.png" alt="" id="graphic">
+      <img src="images/WISHMA logo png.png" alt="" id="graphic">
     </main>
     <button id="upload_widget" class="cloudinary-button">Upload files</button>
 
