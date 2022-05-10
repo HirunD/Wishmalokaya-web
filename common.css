@@ -107,13 +107,37 @@ nav{
     animation: animation-dp 5s infinite;
 }
 
-@keyframes animation-dp {
-    0% {transform: scale(100%);
+.circle{
+    height: 100%;
+    width: 100%;
+    background-color: #bbb;
+    border-radius: 50%;
+    /* animation: wipe-in-bottom-left 1s; */
+    /* stroke-dasharray: 314; */
 }
-    50% { transform: scale(130%);
+.circle:hover{
+    height: 100%;
+    width: 100%;
+    background-color: #bbb;
+    border-radius: 50%;
+    animation: wipe-in-bottom-left 2s 0.5s;
 }
-    100% { transform: scale(100%);}
-}
+    @keyframes wipe-in-bottom-left {
+    0% {
+        clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+      }
+    50% {
+      clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
+    }
+    100% {
+      clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+    }
+  }
+  
+  [transition-style="in:wipe:bottom-left"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-left both;
+  }
+
 #logo{
     width:10vw;
     padding:0.5vw;
@@ -197,5 +221,24 @@ nav{
     position: absolute;
     width: 75%;
     margin-left: 15;
+  }.glass-wipe{
+      background-color: rgba(255, 255, 255, 0.203);
+      backdrop-filter: blur(3px);
+      height: 50vh;
+      width: 10vh;
+      transform: rotate(35deg);
+      position: absolute;
+      /* display: none; */
+      animation: glasswipe 5s infinite;
   }
-  
+@keyframes glasswipe {
+    0% {
+        display: inline;
+        top: 20vh;
+        right: 100vh;
+    }
+    100%{
+        display: none;
+        right: 18vh;
+    }
+}
