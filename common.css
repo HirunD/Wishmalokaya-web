@@ -103,9 +103,16 @@ nav{
 }
 .dropbtn:hover{
     font-size:1.04vw;
-    transform: scale(155%);
-    /* text-shadow:2px 2px 8px #111; */
-    /* box-shadow: 2px 2px 8px #111; */
+    transform: scale(130%);
+    animation: animation-dp 5s infinite;
+}
+
+@keyframes animation-dp {
+    0% {transform: scale(100%);
+}
+    50% { transform: scale(130%);
+}
+    100% { transform: scale(100%);}
 }
 #logo{
     width:10vw;
@@ -148,10 +155,22 @@ nav{
     bottom: 20;
     transition: width 0.35s ease 0s;
     position: absolute;
+    align-self: center;
+    /* width: 10%; */
   }
   
   .nav-ele:hover::after {
+    /* width: 100%; */
+    /* left: 0; */
+    animation: animation 0.5s;
     width: 100%;
+  }
+
+  @keyframes animation {
+    0%   {width: 0%;
+    left: 50;}
+    100% {width: 100%;
+    left: 0;}
   }
 
   .nav-ele-focus {
