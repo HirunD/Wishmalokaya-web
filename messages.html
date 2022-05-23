@@ -7,79 +7,39 @@
     <title>Messages (0)</title>
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="index.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-          <img src="images/WISHMA logo png.png" alt="" id="logo" />
-          <ul id="links">
-            <li class="nav-ele-focus">
-              <p id="current">Home</p>
-            </li>
-            <li class="nav-ele"><a href="submit.html" class="sec">Submit</a></li>
-            <li class="nav-ele">
-              <a href="messages.html" class="sec">Messages</a>
-            </li>
-          </ul>
-          <div id="usr">
-            <button onclick="myFunction()" class="dropbtn" class="outclick">
-              <!--Don't do anything with outclick class-->
-              <!-- <div class="outclick">
-                      <p class="outclick" id="upname">username</p>
-                      <p class="outclick" id="upmail">mail@gmail.com</p>
-                    </div> -->
-              <div class="circle"><img src="images/avatar.png" alt="" id="profile" class="outclick" id="outclick" /></div>
+      <p id="reader">rtgjrtjgijrigjt</p>
+      
+    <input type="button" value="sgin" onclick="initSign()">
+    <input type="button" value="log" onclick="logOut()">
+
+      <script>
+        var config = {
+            apiKey: "AIzaSyBjY3D0FgYpx8G9nAWVKTyiAL9lazZdGX4",
+            authDomain: "wishmalokaya-89d58.firebaseapp.com",
+            databaseURL: "https://wishmalokaya-89d58-default-rtdb.firebaseio.com",
+            projectId: "wishmalokaya-89d58",
+            storageBucket: "wishmalokaya-89d58.appspot.com",
+            messagingSenderId: "213652408875",
+            appId: "1:213652408875:web:bf104e4fa274aaf979786e"
+        };
+        firebase.initializeApp(config);
     
-            </button>
-            <div id="drpdwn" class="dropdown" class="outclick">
-              <img src="images/avatar.png" alt="" id="profile-in" />
-              <p class="outclick">Username</p>
-              <p class="outclick">mail@gmail.com</p>
-              <button class="outclick">Edit Profile</button>
-              <button class="outclick">Sign Out</button>
-            </div>
-            <script>
-              /* When the user clicks on the button, 
-                      toggle between hiding and showing the dropdown content */
-              function myFunction() {
-                document.getElementById("drpdwn").classList.toggle("show");
-                console.log("pressed");
-                myMove();
-              }
-    
-    
-              var id = null;
-              function myMove() {
-                var elem = document.getElementById("drpdwn");
-                var pos = 0;
-                clearInterval(id);
-                id = setInterval(frame, 1);
-                function frame() {
-                  if (pos == 80) {
-                    clearInterval(id);
-                  } else {
-                    pos++;
-                    elem.style.top = pos + "px";
-                  }
-                }
-              }
-    
-              // Close the dropdown if the user clicks outside of it
-              window.onclick = function (event) {
-                if (!event.target.matches(".outclick")) {
-                  var dropdowns = document.getElementsByClassName("dropdown");
-                  var i;
-                  for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains("show")) {
-                      openDropdown.classList.remove("show");
-                    }
-                  }
-                }
-              };
-            </script>
-          </div>
-        </nav>
-      </header>
+        const auth = firebase.auth();
+        const  db = firebase.firestore();
+        
+        db.settings({timestampsInSnapshots : true })
+    </script>
+      <script src="js/u_usertranlator.js"></script>
+      <script src="js/message-reader.js"></script>
+      <script src="js/instant_signin.js"></script>
+      
 </body>
 </html>

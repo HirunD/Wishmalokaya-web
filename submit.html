@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
+</head>
+
+<body>
+    <h1 id="name">dsfd</h1>
+    <input type="text" id="link-in">
+    <input type="text" id="name-in">
+    <input type="button" value="send" id="sendbtn">
+    <input type="button" value="download">
+    <input type="button" value="Submit" id="submbtn">
+    <script>
+        var config = {
+            apiKey: "AIzaSyBjY3D0FgYpx8G9nAWVKTyiAL9lazZdGX4",
+            authDomain: "wishmalokaya-89d58.firebaseapp.com",
+            databaseURL: "https://wishmalokaya-89d58-default-rtdb.firebaseio.com",
+            projectId: "wishmalokaya-89d58",
+            storageBucket: "wishmalokaya-89d58.appspot.com",
+            messagingSenderId: "213652408875",
+            appId: "1:213652408875:web:bf104e4fa274aaf979786e"
+        };
+        firebase.initializeApp(config);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        db.settings({ timestampsInSnapshots: true })
+    </script>
+
+    <script src="js/u_usertranlator.js"></script>
+    <script src="js/message-sender.js"></script>
+    <script src="js/instant_signin.js"></script>
+</body>
+
+</html>
